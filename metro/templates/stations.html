@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block base %}
+
+{% if list_stations %}
+
+<div class="container p-2">
+    <div class="row">
+        <div class="col-sm">
+            <ul class="list-group">
+                {% for station in list_stations %}
+
+                <li class="list-group-item list-group-item-action">{{ station.nom }}</li>
+
+                {% endfor %}
+              </ul>
+        </div>
+    </div>
+</div>
+
+{% else %}
+
+<p>No stations are available.</p>
+{% endif %}
+
+{% endblock %}

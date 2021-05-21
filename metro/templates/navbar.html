@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">TP - Metro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Menu
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{% url 'metro:lignes' %}">Lignes</a></li>
+            <li><a class="dropdown-item" href="{% url 'metro:stations' %}">Station</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        {% if connect %}
+        <form class="d-flex">
+          <li><a class="nav-link active" aria-current="page" href="/admin/">Administration</a></li>
+          <li><a class="nav-link active" aria-current="page" href="{% url 'metro:logout' %}">Déconnexion</a></li>
+        </form>
+        {% else %}
+        <form class="d-flex">
+          <li><a class="nav-link active" aria-current="page" href="/admin/">Connexion</a></li>
+        </form>
+        {% endif %}
+      </ul>
+      
+    </div>
+  </div>
+</nav>

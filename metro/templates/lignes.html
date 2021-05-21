@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block base %}
+
+{% if list_lignes %}
+
+<div class="container p-2">
+    <div class="row">
+        <div class="col-sm">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action">
+                    {% for ligne in list_lignes %}
+
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ ligne.nom }}</h5>
+                    </div>
+                    <p class="mb-1">{{ ligne.get_stations }}</p>
+
+                    {% endfor %}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+
+<p>No lignes are available.</p>
+{% endif %}
+
+{% endblock %}

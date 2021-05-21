@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block base %}
+
+<form action="{% url 'metro:trajet' %}" method="post">
+    {% csrf_token %}
+
+    <div class="container p-2">
+        <div class="row">
+            <div class="col-sm d-flex justify-content-center">
+                    
+                    {{ form }}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-2">
+        <div class="row">
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" type="submit">Valider</a>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+{% include "image.html" %}
+
+{% endblock %}

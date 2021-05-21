@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block base %}
+
+<div class="container p-2">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                    Déconnexion
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Déconnecté avec succès</h5>
+                  <p class="card-text">Déconnexion effectuée sans problème.</p>
+                  <a href="{% url 'metro:index' %}" class="btn btn-primary">Retour au menu principal</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% load sass_tags %}
+{% load static %}
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{% sass_src 'scss/bootstrap.scss' %}" rel="stylesheet" type="text/css" />
+
+    <title>Metro</title>
+    
+    {% include "navbar.html" %}
+  </head>
+  
+  <body>
+    {% block base %}{% endblock %}
+    
+    {% include "footer.html" %}
+
+    <script type="module" src="{% static 'js/index.umd.js' %}"></script>
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
