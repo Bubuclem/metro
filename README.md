@@ -12,3 +12,5 @@ Vous comparerez les résultats en temps de transports prévus pour l’utilisate
 différentes méthodes et présenterez la complexité en temps que ces algorithmes ont 
 engendrés dans leur calcul. Vous pourrez également comparer les caractéristiques des 
 itinéraires qui ont été calculé.
+
+![arbres_graphes](https://user-images.githubusercontent.com/25383654/119223593-9dfb1400-bafa-11eb-9d74-f5310ef8301f.png)
